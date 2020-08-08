@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http HttpResponse
+from django.http  import HttpResponse
 
 # Create your views here.
-def welcome (request):
-    return HttpResponse('welcome to the gram')
+def welcome(request):
+    return HttpResponse('Welcome to the Gram')
 
