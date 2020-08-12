@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Cute+Font|Almendra");
+@import url("https://fonts.googleapis.com/css?family=Amita");
 body {
     background-color: #ffff;
 }
@@ -25,6 +27,7 @@ nav {
 }
 .navigation a{
     color: #111;
+    font-family: Amita;
 }
 
 .logo {
@@ -104,7 +107,7 @@ nav {
 }
 .profile_image{
     display: inline-block;
-    /* background-color: royalblue; */
+    background-color: royalblue;
     padding:0;
     margin:0 auto;
     /* border: 0 solid #000; */
@@ -140,7 +143,7 @@ nav {
 
 .post_options{
     font-size: 15px;
-    float: right;
+    /* float: right; */
     display: inline-block;
     margin: 4px;
     padding: 5px;
@@ -216,4 +219,161 @@ nav {
     letter-spacing: .2px;
     padding: 0px 16px;
     text-transform: uppercase;
+}
+
+.detail_card{
+    background-color: #fff;
+    margin: 0 auto;
+    width: 949px;
+    height: auto;
+    border: 1px solid #cccc;
+    border-radius: 3px;
+    /* z-index: 2; */
+}
+.detail_image{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    /* position: absolute; */
+    display: inline-block;
+    /* float: left; */
+}
+.detail_image img{
+    width: 614px;
+    height: auto;
+}
+.post_detail_info{
+    display: inline-block;
+    float: right;
+    width: 335px;
+    height: inherit;
+    position: absolute;
+    z-index: 3;
+
+}
+.detail_bottom{
+    position: fixed;
+    width: 100%;
+    bottom: 20px;
+    /* z-index: 2; */
+    height: 150px;
+}
+
+.text_comment_area{
+    background: 0 0;
+    border: 0;
+    color: #262626;
+    height: 18px;
+    padding: 0;
+    outline: 0;
+    width: 260.8px;
+}
+.new_comment_section{
+    height: 54px;
+    widows: 300px;
+    justify-content: center;
+    font-size: 14px;
+    border-top: 1px solid #efefef;
+    margin-top: 4px;
+    padding: 0 16px;
+    position: fixed;
+    /* width: 300px; */
+}
+.content-section{
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    width: 650px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.account-img {
+    height: 150px;
+    width: 150px;
+    margin-right: 90px;
+    margin-left: 75px;
+
+    margin-bottom: 16px;
+}
+.account-heading{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px 20px;
+}
+.account-heading h2{
+    color: #262626;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 32px;
+    margin: -5px 0 -6px;
+    padding-right: 15px; 
+}
+.profile_media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 320px;
+    margin: 0px 0px 20px;
+}
+.profile_media a{
+    text-decoration: none;
+    color: #262626;
+
+}
+
+.number_of_posts, .number_of_followers, .number_of_follows, .profilename{
+    color: #262626;
+    font-weight: 600;
+}
+.profilename p{
+    padding: 0px;
+    margin: 0px !important;
+}
+
+.profile_page{
+    max-width: 935px;
+    margin: 0 auto 30px;
+    padding: 60px 20px 0px;
+    box-sizing: content-box;
+}
+.profile_posts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    border-top: .8px solid #ccc;
+    position: relative;
+}
+.profile_posts img{
+    height: 293px;
+    width: 293px;
+    margin-bottom: 28px;
+}
+
+.profile_posts img :hover{
+    width: 100%;
+    height: 100%;
+    background: slategray;
+    opacity: .4;
+    position: absolute;
+    z-index: 1;
+}
+.profile_options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 70px;
+    border: .8px solid rgb(248, 241, 241);
+    width: 100%;
+    height: 50px;
+   
+}
+.profile_options button{
+    /* padding-right: 28px; */
+    align-self: center;
+
+}
+.hide {
+    display: none;
 }
