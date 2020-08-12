@@ -12,11 +12,13 @@
         </div>
           <div class='contact_icons'>
                 <a href="explore"><i class="far fa-compass"></i></a>
-                {% if user.is_authenticated %}
-                    <a href="#"> <i class="far fa-heart"></i> </a>
+                <a href="#"> <i class="far fa-heart"></i> </a>
+                {% if user.is_authenticated %}                   
                     <a href="{% url 'profile' %}"><i class="far fa-user"></i> </a>
                     <a href="{% url 'gram:post_create' %}"> <i class="fas fa-plus"></i></a>
                     <a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i></a>
+                {% else %}
+                    <a href="{% url 'login' %}"> <i class="far fa-user"></i> </a>
                 {% endif %}
             </div> 
     </div>
