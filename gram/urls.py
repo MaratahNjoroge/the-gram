@@ -1,10 +1,23 @@
-from django.conf.urls import url,include
+from django.urls import path, include
 from .views import (
-    PostListView
+    PostDetailView,
+    PostDeleteView,
+    PostListView,
+    PostCreateView,
+    PostUpdateView,
+    saved_posts,
+    PostLikeToggle,
+    PostLikeAPIToggle,
 )
-    
-
-app_name = 'gram'
-urlpatterns=[
-    url('^$',PostListView.as_view(),name = 'post'),
+# from django.contrib.auth import views as auth_views
+app_name = 'gram' 
+urlpatterns = [
+    path('', PostListView.as_view(), name='post'),
+    path('<int:id>',PostDetailView.as_view(), name='post_detail'),
+    path('new/', PostCreateView.as_view(), name='post_create'),
+    path('<int:id>/update/', PostUpdateView.as_view(), name='post_update'),
+    path('<int:id>/delete/', PostDeleteView.as_view(), name='post_delete'),
+    path('<int:id>/likes/', PostLikeToggle.as_view(), name='like_toggle'),
+    path('api/<int:id>/likes/', PostLikeAPIToggle.as_view(), name='like_api_toggle'),
+    path('saved/', saved_posts, name='saved_posts'),
 ]
